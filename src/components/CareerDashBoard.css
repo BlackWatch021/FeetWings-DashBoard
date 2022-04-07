@@ -24,8 +24,9 @@
 .paraInfo{
     width: 75vw;
     height: 20vh;
-    background-color: green;
     margin: 30px 0px;
+    overflow: hidden;
+    padding-bottom: 10px;
 }
 
 input{

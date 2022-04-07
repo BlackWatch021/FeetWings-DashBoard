@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate, Link } from "react-router-dom";
+import { CKEditor } from '@ckeditor/ckeditor5-react';         //In page Editor API
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'; //In page Editor API
 import './CareerDashBoard.css'
 
 const CareerDashBoard = () => {
@@ -93,7 +95,8 @@ const CareerDashBoard = () => {
                             <input type="text" placeholder='Short Description( 150 words )' name='short_description' className='short_description' value={jobData.short_description} onChange={handleChange} required />
 
                             <div className="paraInfo">
-
+                                <CKEditor
+                                    editor={ClassicEditor} />
                             </div>
                             <input type="submit" className='submit' />
                         </form>
